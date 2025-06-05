@@ -1,0 +1,149 @@
+/* Light Mode (默認模式) */
+:root {
+    --background-color: transparent;
+    --unity-container-background: transparent;
+    --unity-canvas-background: transparent;
+    --unity-loading-bar-background: none;
+    --unity-logo-background: url('unity-logo-light.png');
+    --unity-progress-bar-empty-background: url('progress-bar-empty-light.png');
+    --unity-progress-bar-full-background: url('progress-bar-full-light.png');
+    --unity-webgl-logo-background: url('webgl-logo-light.png');
+    --unity-fullscreen-button-background: url('fullscreen-button-light.png');
+    --unity-warning-background: white;
+}
+
+/* Dark Mode */
+.dark-mode {
+    --background-color: transparent;
+    --unity-container-background: transparent;
+    --unity-canvas-background: transparent;
+    --unity-loading-bar-background: none;
+    --unity-logo-background: url('unity-logo-dark.png');
+    --unity-progress-bar-empty-background: url('progress-bar-empty-dark.png');
+    --unity-progress-bar-full-background: url('progress-bar-full-dark.png');
+    --unity-webgl-logo-background: url('webgl-logo-dark.png');
+    --unity-fullscreen-button-background: url('fullscreen-button-dark.png');
+    --unity-warning-background: black;
+}
+
+/* 通用樣式 */
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    background: var(--background-color);
+}
+
+#unity-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--unity-container-background);
+}
+
+#unity-container.unity-mobile {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: var(--unity-container-background);
+}
+
+#unity-canvas {
+    background: var(--unity-canvas-background);
+}
+
+.unity-mobile #unity-canvas {
+    width: 100%;
+    height: 100%;
+}
+
+#unity-loading-bar {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+#unity-logo {
+    width: 154px;
+    height: 130px;
+    background: var(--unity-logo-background) no-repeat center;
+}
+
+#unity-progress-bar-empty {
+    width: 141px;
+    height: 18px;
+    margin-top: 10px;
+    margin-left: 6.5px;
+    background: var(--unity-progress-bar-empty-background) no-repeat center;
+}
+
+#unity-progress-bar-full {
+    width: 0%;
+    height: 18px;
+    margin-top: 10px;
+    background: var(--unity-progress-bar-full-background) no-repeat center;
+}
+
+#unity-webgl-logo {
+    float: left;
+    width: 204px;
+    height: 38px;
+    background: var(--unity-webgl-logo-background) no-repeat center;
+}
+
+#unity-build-title {
+    float: right;
+    margin-right: 10px;
+    line-height: 38px;
+    font-family: arial;
+    font-size: 18px;
+}
+
+#unity-fullscreen-button {
+    cursor: pointer;
+    float: right;
+    width: 38px;
+    height: 38px;
+    background: var(--unity-fullscreen-button-background) no-repeat center;
+}
+
+#unity-warning {
+    position: absolute;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%);
+    background: var(--unity-warning-background);
+    padding: 10px;
+    display: none;
+}
+
+#orientationData {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: none;
+}
+
+#video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.ldBar-label {
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    transform: translate(-50%, 50%);
+    color: rgb(120, 104, 104);
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    pointer-events: none;
+}
